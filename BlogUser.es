@@ -36,7 +36,7 @@ GET /bloguser/_search
 {
     "query": {
         "match_phrase_prefix": {
-            "name": "张三"
+            "hobby": "看"
         }
     }
 }

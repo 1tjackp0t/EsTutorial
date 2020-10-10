@@ -30,13 +30,14 @@ public class UserController {
     public String addUser(@RequestBody BlogUser blogUser) {
         System.out.println(blogUser);
         if (userService.addUser(blogUser)) {
-            return "添加成功";
+            return "添加成功"+"\n"+"用户ID:"+blogUser.getId();
         } else {
             return "添加失败";
         }
     }
 
-    @PostMapping("update")
+//    @PostMapping("update")
+    @PutMapping("update")
     public String updateUser(@RequestBody BlogUser blogUser) {
         System.out.println(blogUser);
         if (userService.updateUser(blogUser)) {
@@ -46,7 +47,8 @@ public class UserController {
         }
     }
 
-    @GetMapping("delete/{id}")
+//    @GetMapping("delete/{id}")
+    @DeleteMapping("delete/{id}")
     public String deleteUser(@PathVariable String id) {
         System.out.println(id);
         if (userService.deleteUser(id)) {
