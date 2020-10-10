@@ -1,0 +1,6 @@
+server:
+  port: 8848
+es:
+  host: 172.22.105.135
+  port: 9200
+  scheme: http
